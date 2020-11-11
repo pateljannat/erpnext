@@ -1192,14 +1192,13 @@ class StockEntry(StockController):
 				item_dict[item]["qty"] = 0
 
 		# delete items with 0 qty
-		for item in item_dict.keys():
+		for item in list(item_dict):
 			if not item_dict[item]["qty"]:
 				del item_dict[item]
 
 		# show some message
 		if not len(item_dict):
 			frappe.msgprint(_("""All items have already been transferred for this Work Order."""))
-
 		return item_dict
 
 	def get_pro_order_required_items(self, backflush_based_on=None):
