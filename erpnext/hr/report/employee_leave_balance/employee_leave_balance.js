@@ -39,7 +39,7 @@ frappe.query_reports["Employee Leave Balance"] = {
 		}
 	],
 
-	onload: (report) => {
+	onload: () => {
 		frappe.call({
 			type: "GET",
 			method: "erpnext.hr.utils.get_leave_period",
@@ -50,9 +50,9 @@ frappe.query_reports["Employee Leave Balance"] = {
 			},
 			freeze: true,
 			callback: (data) => {
-				frappe.query_report.set_filter_value("from_date", data.message[0].from_date)
-				frappe.query_report.set_filter_value("to_date", data.message[0].to_date)
+				frappe.query_report.set_filter_value("from_date", data.message[0].from_date);
+				frappe.query_report.set_filter_value("to_date", data.message[0].to_date);
 			}
-		})
+		});
 	}
 }
