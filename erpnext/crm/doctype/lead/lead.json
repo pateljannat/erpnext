@@ -460,7 +460,7 @@
  "idx": 5,
  "image_field": "image",
  "links": [],
- "modified": "2021-01-06 19:39:58.748978",
+ "modified": "2021-07-23 16:16:18.887908",
  "modified_by": "Administrator",
  "module": "CRM",
  "name": "Lead",
@@ -525,5 +525,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "subject_field": "title",
- "title_field": "title"
+ "title_field": "title",
+ "track_seen": 1
 }
